@@ -23,14 +23,14 @@ def max_subarray(A):
 for i in range(2*t):
     k=int(input())
     arr = [int(arr_temp) for arr_temp in input().strip().split(' ')]
-    if(all(item>0 for item in arr)):
+    if(all(item > 0 for item in arr)):
         print(sum(arr),sum(arr))
-    elif(all(item<0 for item in arr)):
+    elif(all(item < 0 for item in arr)):
         print(max(arr),max(arr))
     else:
         c=0
         for i in range(len(arr)):
-            if(c+arr[i]>c):
+            if(c+arr[i] > c):
                 c+=arr[i]
         print(max_subarray(arr),c)
              
